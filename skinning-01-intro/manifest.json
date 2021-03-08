@@ -1,0 +1,16 @@
+{
+    "schema": 1,
+    "id": "skinning-01-intro",
+    "name": "skinning-01-intro",
+    "isApp": true,
+    "version": "1.0.0",
+    "permissions": {
+        "client": {
+            "construct": true,
+            "graphics": true,
+            "scene": true,
+            "input": true,
+            "interface": true
+        }
+    }
+}
