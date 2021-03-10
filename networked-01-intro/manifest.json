@@ -3,7 +3,7 @@
     "id": "networked-01-intro",
     "name": "networked-01-intro",
     "isApp": true,
-    "version": "1.0.0",
+    "version": "1.0.1",
     "permissions": {
         "client": {
             "construct": true,

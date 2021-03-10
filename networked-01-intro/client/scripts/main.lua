@@ -13,7 +13,7 @@ local txtBox = core.construct("guiTextBox", {
     textMultiline = true
 })
 
-core.networking:on("message", function(message)
+function message(message)
     table.insert(lines, message)
     if #lines > 10 then
         table.remove(lines, 1)
@@ -24,4 +24,14 @@ core.networking:on("message", function(message)
         txt = txt .. v .. "\n"
     end
     txtBox.text = txt
+end
+
+core.networking:on("message", message)
+
+core.networking:on("_connected", function(client)
+    message("connected")
+end)
+
+core.networking:on("_disconnected", function(client)
+    message("disconnected")
 end)
